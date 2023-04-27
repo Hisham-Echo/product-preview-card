@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --main-font: "Fraunces", serif;
+    --sec-font: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cream);
+    font-family: var(--main-font);
+}
+
+/* start main */
+
+main {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--cream);
+}
+
+section {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.img {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    background-color: green;
+    background-image: url(images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.text {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+}
+
+.text p {
+    color: var(--dark-grayish-blue);
+    font-family: var(--sec-font);
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.text p:first-of-type {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.text h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.text p:last-of-type {
+    line-height: 1.7;
+}
+
+.price {
+    padding: 15px 0;
+    position: relative;
+}
+
+.price span:first-of-type {
+    color: var(--dark-cyan);
+    font-size: 2rem;
+}
+
+.price span:last-of-type {
+    font-family: var(--sec-font);
+    font-weight: 500;
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+    font-size: 0.9rem;
+    position: absolute;
+    left: 60%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+button {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    transition: background-color 0.2s ease-in-out;
+    border: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+}
+
+button img {
+    margin-right: 7px;
+}
+/* end main */
+
+footer {
+    padding: 10px;
+}
+
+/* media */
+
+@media (max-height: 520px) {
+    main {
+        height: auto;
+    }
+}
+
+@media (min-width: 830px) {
+    section {
+        width: 600px;
+        height: 450px;
+    }
+    .img {
+        border-radius: 10px 0 0 10px;
+        align-self: stretch;
+        width: 50%;
+        height: 100%;
+        background-image: url(images/image-product-desktop.jpg);
+        -webkit-border-radius: 10px 0 0 10px;
+        -moz-border-radius: 10px 0 0 10px;
+        -ms-border-radius: 10px 0 0 10px;
+        -o-border-radius: 10px 0 0 10px;
+    }
+    .text {
+        height: 100%;
+        width: 50%;
+        padding: 30px 40px;
+        border-radius: 0 10px 10px 0;
+        -webkit-border-radius: 0 10px 10px 0;
+        -moz-border-radius: 0 10px 10px 0;
+        -ms-border-radius: 0 10px 10px 0;
+        -o-border-radius: 0 10px 10px 0;
+    }
+    .price span:last-of-type {
+        left: 78%;
+    }
+}
