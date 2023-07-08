@@ -91,6 +91,6 @@ This challenge is completely free. Please share it with anyone who will find it 
 
 **Have fun building!** 🚀
 
-**Live preview:** https://hisham3243.github.io/product-preview-card/
+**Live preview:** https://hisham-echo.github.io/product-preview-card/
 
 **Source:** https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa
